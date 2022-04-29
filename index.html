@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Site</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,11 +24,32 @@
         <p>Settings</p>
     </div>
     <div class="content">
-        <div class="boxes">
+        <div class="boxes" onclick="openModal(1)">
             <img id="graph" src="graph.png" alt="">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus efficitur tincidunt. Maecenas non neque euismod, euismod orci sit amet, gravida dolor. Donec vel fringilla urna. Sed eu nunc scelerisque, tempus sapien eget, porta orci.
                 Cras vehicula faucibus nulla, vulputate sollicitudin dui sagittis nec. Duis eu elementum lacus. Etiam feugiat risus a euismod condimentum. Curabitur neque massa, posuere in auctor eget, mollis in massa. In at urna semper, scelerisque arcu
                 hendrerit, porta leo. Nulla vitae massa auctor, mattis mauris vitae, ultricies lectus. Suspendisse potenti. Nam sit amet libero metus. Integer a dolor sed urna molestie tempor sed ac est. Sed sit amet facilisis diam.</p>
+
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Modal Header</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>Some text in the Modal Body</p>
+                        <p>Some other text...</p>
+                    </div>
+                    <div class="modal-footer">
+                        <h3>Modal Footer</h3>
+                    </div>
+                </div>
+
+            </div>
+
+
         </div>
         <div class="boxes">
             <img src="info.jpg" alt="">
