@@ -2,7 +2,6 @@
 
 // Get the modal
 const modal = document.getElementById("myModal");
-const modal1 = document.getElementById("modal1");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -18,13 +17,10 @@ function whichModal(i) {
     if (i === 1) {
         console.log(i)
         console.log(modal)
-        console.log("which modal span", span)
         modal.style.display = `block`
 
     }
 }
-
-modal1.onclick = whichModal(1);
 
 // When the user clicks on <span> (x), close the modal
 // span.addEventListener(`click`, closeModal())
