@@ -22,14 +22,6 @@ function whichModal(i) {
     }
 }
 
-// When the user clicks on <span> (x), close the modal
-// span.addEventListener(`click`, closeModal())
-
-function closeModal() {
-    console.log(`trying to close modal`)
-    modal.style.display = `none`
-}
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
         if (event.target == modal) {
@@ -46,13 +38,12 @@ function openModal() {
 
 
 
-
-
-
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function(e) {
     modal.style.display = "none";
     console.log(`CLOSE`)
+    e.stopPropagation();
+
 }
 
 // When the user clicks anywhere outside of the modal, close it
