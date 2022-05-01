@@ -8,7 +8,7 @@ const modal4 = document.getElementById("modal4");
 
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+const span = document.getElementsByClassName("close");
 
 console.log(span)
 console.log(modal1)
@@ -42,14 +42,17 @@ function whichModal(i) {
 
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    console.log(12345)
-}
+// window.onclick = function(event) {
+//     if (event.target == modal1 && modal2 && modal3 && modal4) {
+//         allModalsClosed();
+//     }
+// }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function(e) {
-    allModalsClosed();
-    console.log(`CLOSE`)
-    e.stopPropagation();
-
-}
+Array.from(span).forEach(x => {
+    x.onclick = function(e) {
+        allModalsClosed();
+        console.log(`CLOSE`)
+        e.stopPropagation();
+    }
+});
